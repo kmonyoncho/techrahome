@@ -9,8 +9,24 @@ import {
 } from "@material-ui/core";
 import { AddShoppingCart } from "@material-ui/icons";
 
-function Product() {
-  return <div></div>;
-}
+const Product = () => {
+  return (
+    <Card className={classes.root}>
+      <CardMedia
+        className={classes.media}
+        image=""
+        title={Product.name}
+      ></CardMedia>
+      <CardContent>
+        <div className={classes.cardContent}>
+          <Typography variant="h5" gutterBottom>
+            {product.name}
+          </Typography>
+          <Typography variant="h5">{product.price}</Typography>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
 
 export default Product;
